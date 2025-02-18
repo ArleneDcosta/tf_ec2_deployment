@@ -65,5 +65,14 @@ Type `yes` when prompted. This will remove the VPC, subnet, internet gateway, se
 - The **AMI** used in this configuration is region-specific. If you change the AWS region, make sure you use a valid AMI for that region.  
 - In production, use more restrictive security group rules and separate public and private subnets.  
 - For collaborative environments, use **Terraform remote state** stored in AWS S3 with DynamoDB for state locking.
+- Provision an Amazon EC2 instance using Terraform, configuring security groups, key pairs, and IAM roles for secure access and resource management.
+- Automate instance creation with user data scripts to initialize services, install dependencies, and configure the application environment upon launch.
+- Implement a security-first approach by restricting inbound traffic with security groups and allowing only necessary ports (e.g., SSH and HTTP).
+- Attach an Elastic IP to ensure a stable public address for accessing the application and maintaining consistent connectivity.
+- Integrate AWS CloudWatch for real-time monitoring, logging, and setting up alarms to ensure optimal performance and security compliance.
+- Enable Auto-Recovery and EBS Volume Snapshots to enhance fault tolerance and ensure data durability.
+- Configured and deployed a Node.js backend and React.js frontend on the EC2 instance, with proper environment variables for secure operations.
+- Optimize EC2 cost management by selecting appropriate instance types (t3.medium) and using auto-scaling policies for traffic spikes.
+
 
 > **Happy Terraforming!**
